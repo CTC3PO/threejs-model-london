@@ -22,7 +22,7 @@ renderer.setClearColor(0xa3a3a3);
 
 const orbit = new OrbitControls(camera, renderer.domElement);
 
-camera.position.set(6, 6, 6);
+camera.position.set(1200, 1200, 1200);
 orbit.update();
 
 const grid = new THREE.GridHelper(30, 30);
@@ -58,7 +58,7 @@ rgbeLoader.load("./assets/MR_INT-005_WhiteNeons_NAD.hdr", function (texture) {
 
 function animate(time) {
   //uncomment this to enable rotatin of object
-  //   if (object) object.rotation.y = -time / 3000;
+  if (object) object.rotation.y = -time / 9000;
   renderer.render(scene, camera);
 }
 

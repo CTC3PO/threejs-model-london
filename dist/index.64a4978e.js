@@ -587,7 +587,7 @@ const scene = new _three.Scene();
 const camera = new _three.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 3000);
 renderer.setClearColor(0xa3a3a3);
 const orbit = new (0, _orbitControlsJs.OrbitControls)(camera, renderer.domElement);
-camera.position.set(6, 6, 6);
+camera.position.set(1200, 1200, 1200);
 orbit.update();
 const grid = new _three.GridHelper(30, 30);
 scene.add(grid);
@@ -613,7 +613,7 @@ rgbeLoader.load("./assets/MR_INT-005_WhiteNeons_NAD.hdr", function(texture) {
 });
 function animate(time) {
     //uncomment this to enable rotatin of object
-    //   if (object) object.rotation.y = -time / 3000;
+    if (object) object.rotation.y = -time / 9000;
     renderer.render(scene, camera);
 }
 renderer.setAnimationLoop(animate);
